@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AddBanner from './component/Addbanner';
+import Header from "./layout/Header";
+import Content from "./layout/Content";
+import Footer from "./layout/Footer";
+import "./assets/css/style.scss";
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+         <Header />
+         <Content />
+         <Footer />
+         <AddBanner path="/164808479/Leaderboard" Width="728"  Height="90"  id="div-gpt-ad-1536172937182-0"  />
     </div>
+
+    
   );
 }
 
