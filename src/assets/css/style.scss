@@ -1,16 +1,11 @@
-$primColor : #144d50;
-$bgColor : #f0f0f0;
-$MenuBg : #f0f0f05c;
-$txtPrim : #144d50;
-$headerShadow : hsla(0, 0%, 0%, 0.251);
-$black : #000000;
-$cardBg : #eeebe3;
+@import 'var';
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background: $bgColor;
 }
-.headerSec{
+
+.headerSec {
     position: relative;
     z-index: 2;
     width: auto;
@@ -19,52 +14,59 @@ body{
     box-shadow: 0px 2px 4px $headerShadow;
 }
 
-.menuNav{
+.menuNav {
     display: block;
     width: 24px;
     padding: 0px;
     border: none;
     background: none;
-    &.active{
-        span{
-            &:nth-child(1){
+
+    &.active {
+        span {
+            &:nth-child(1) {
                 transform: translateY(7px) rotate(40deg) scale(1.1);
                 width: 100%;
             }
-            &:nth-child(2){
+
+            &:nth-child(2) {
                 transform: translateY(0) rotate(-40deg) scale(1.1);
                 width: 100%;
             }
-            &:nth-child(3){
+
+            &:nth-child(3) {
                 opacity: 0;
             }
         }
     }
-    span{
+
+    span {
         display: block;
         height: 3px;
         width: 100%;
         margin-top: 4px;
         background: #fff;
         transition: transform 0.5s;
-        &:nth-child(1){
+
+        &:nth-child(1) {
             width: 70%;
             margin-top: 2px;
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
             width: 80%;
         }
     }
 }
 
-.logoImg{
+.logoImg {
     width: 150px;
 }
-.text-right{
+
+.text-right {
     text-align: right;
 }
 
-.slideMenu{
+.slideMenu {
     position: absolute;
     height: calc(100vh - 58px);
     background: $MenuBg;
@@ -72,53 +74,522 @@ body{
     left: -100vw;
     top: 58px;
     transition: ease 0.5s;
-    &.active{
+
+    &.active {
         left: 0vw;
     }
 }
-.slideUl{
+
+.slideUl {
     list-style: none;
     padding-top: 50px;
     padding-right: 28px;
-    .slideli{
-        margin-bottom: 10px;
-        .menuItem{
+
+    .slideli {
+        margin-bottom: 20px;
+
+        .menuItem {
             text-decoration: none;
-            font-size: calc(12px + 4*(100vw  - 320px)/ 1440);
-            color:$txtPrim;
-            &:hover{
-                    color: $black;
+            font-size: calc(12px + 4*(100vw - 320px)/ 1440);
+            color: $txtPrim;
+
+            &:hover {
+                color: $black;
             }
         }
     }
 }
+
 .slideMenuInner {
     width: 100%;
     background: #ffffff;
     max-width: 400px;
 }
 
-.bestFriendCard{
-            margin-top: 20px;
-            background: $cardBg;
-            padding: 20px 14px;
-            border-radius: 8px;
-            .bestCardH{
-                        color: $txtPrim;
-                        font-size: 32px;
-                        text-align: center;
-            }
+.p2014{
+    padding: 20px 14px;
+}
+.bestFriendCard {
+    margin-top: 20px;
+    background: $cardBg;
+    @extend .p2014;
+    border-radius: 8px;
+
+    .bestCardH {
+        color: $txtPrim;
+        font-size: 32px;
+        text-align: center;
+    }
 }
 
-.custom-ad{
+.custom-ad {
     max-width: 300px;
     height: 250px;
     margin: 0 auto;
-    .custom-ad-link{
+
+    .custom-ad-link {
         text-decoration: none;
-        img{
-                width: 100%;
-                height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
         }
+    }
+}
+
+
+.loader-center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: $loaderBg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.main-content-sec {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: $cardBg;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.main-sec {
+    padding: 24px;
+}
+
+.mb-6 {
+    margin-bottom: 60px;
+}
+
+.primary-btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background: $BtnColor;
+    color: $white;
+    font-size: $font16;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $radius10;
+    font-weight: bold;
+
+    &:hover {
+        border: 2px solid $BtnColor;
+    }
+}
+
+.heading {
+    font-weight: bold;
+    font-size: $font32;
+    line-height: $lheight36;
+    color: $txtPrim;
+    text-align: center;
+    margin: 0px;
+}
+
+.subheading {
+    font-size: $font20;
+    line-height: $lheight25;
+    margin: 0px;
+    font-weight: bold;
+    color: $txtPrim;
+}
+
+.text-p {
+    font-size: $font16;
+    line-height: $lheight18;
+    margin: 0px;
+    font-weight: normal;
+    color: $txtPrim;
+}
+
+.inputForm {
+    margin: 0 auto;
+    font-size: $font16;
+    height: 44px;
+    line-height: $lheight30;
+    border: 1px solid #8B8B8B;
+    background: $white;
+    box-sizing: border-box;
+    border-radius: $radius10;
+    text-align: center;
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem #3490dc40;
+        border-color: $primColor;
+    }
+}
+
+.home-content {
+    @extend .p2014;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: $radius10;
+    background: $cardBg;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+.list-style {
+    padding-left: 20px;
+
+    li {
+        line-height: 24px;
+    }
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-sec {
+    box-shadow: 0px -2px 4px #00000040;
+    background: $primColor;
+    padding: 16px;
+    color: $white;
+
+    .footer-text {
+        margin: 0px;
+        font-size: 12px;
+    }
+
+    .social-icon {
+        max-width: 40px;
+        width: 100%;
+        height: 40px;
+        background: $white;
+        border-radius: $radius50;
+        @extend .flex-center;
+    }
+
+    .social-media {
+        @extend .flex-center;
+        gap: 10px;
+    }
+
+}
+
+// question page 
+.question-btn {
+    @extend .flex-center;
+    gap: 7px;
+
+    &>span {
+        @extend .flex-center;
+        min-width: 26px;
+        height: 26px;
+        border-radius: $radius50;
+        background: #cccccc80;
+        font-size: $font16;
+
+        &.active {
+            background: $BtnColor;
+            color: $white;
+        }
+    }
+}
+
+.question-sec {
+    @extend .p2014;
+    position: relative;
+    background: $cardBg;
+    border-radius: $radius10;
+    margin-top: 20px;
+    .skip-btn{
+        max-width: 160px;
+        width: 100%;
+        height: 40px;
+        border: 1px solid $skipBtn;
+        background: $skipBg;
+        border-radius: $radius10;
+    }
+}
+
+.question {
+    font-size: $font22;
+    font-weight: 700;
+    color: $primColor;
+    line-height: $lheight30;
+    margin-bottom: 15px;
+}
+.SingleCard{
+        padding: 5px;
+        background: $white;
+        font-size: $font16;
+        text-align: center;
+        @extend .flex-center;
+        border-radius: $radius10;
+        box-shadow: 0px 1px 4px 0px #d0c6bb;
+        cursor: pointer;
+        &.active{
+            background: $BtnColor;
+            color: $white;
+            font-weight: bold;
+        }
+}
+.single-line-ans{
+    @extend .flex-center;
+    flex-direction: column;
+    align-items: unset;
+    gap: 15px;
+    margin-top: 20px;
+}
+.GridCard{
+    max-width: calc(50% - 16px);
+    background: $white;
+    border-radius: $radius10;
+    box-shadow: 0px 1px 4px 0px #d0c6bb;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+    &.active{
+            background: $BtnColor;
+            
+    }
+    .GridImg{
+            width: 100%;
+    }
+
+}
+.AnsW{
+    background: #e3342f;
+    .CardTxt{
+        font-weight: bold;
+        color: $white;
+    }
+}
+
+.grid-line-ans{
+    @extend .flex-center;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: unset;
+    margin-top: 20px;
+}
+.CardTxt{
+    margin: 0px;
+    padding: 5px 0px;
+}
+.shareCom{
+    @extend .p2014;
+    position: relative;
+    background: $cardBg;
+}
+.copyInput{
+    padding: 5px;
+    color: $black;
+    border-radius: $radius10;
+    height: 44px;
+    line-height: 32px;
+    background: $white;
+    border: 1px solid #BBBBBB;
+    width: 100%;
+    text-align: center;
+    resize: none;
+}
+.max-438{
+    max-width: 438px;
+}
+.shareBtn{
+    @extend .flex-center;
+    border-radius: $radius10;
+    width: calc(50% - 5px);
+    padding: 0px 3px;
+    height: 46px;
+    &:nth-child(1){
+        width: 100%;
+    }
+    .ShareTxt{
+        font-size: 16px;
+        color: $white;
+        font-weight: bold;
+        margin-left: 5px;
+        display: inline-block;
+    }
+    .shareLink{
+        text-decoration: none;
+    }
+}
+.shareGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.whatsapp{
+    background: #0b8f21;
+    &:hover{
+        background: #0b8f21;
+    }
+}
+
+.fb{
+    background: #1E4FAD;
+    &:hover{
+        background: #1E4FAD;
+    }  
+}
+.snap{
+    background: #FEFB01;
+    .ShareTxt{
+        color: #3a3a3a;
+    }
+    &:hover{
+        background: #FEFB01;
+    }  
+}
+.messanger{
+    background: #0084FF;
+    &:hover{
+        background: #0084FF;
+    }
+}
+.twitter{
+    background: #1BA5D4;
+    &:hover{
+        background: #1BA5D4;
+    }
+}
+.insta{
+    background: linear-gradient(270deg, #FEE455 0%, #FEE454 0.01%, #F6423C 27.08%, #C2248F 61.98%, #1E4FAD 85.42%);
+    &:hover{
+        background: linear-gradient(270deg, #FEE455 0%, #FEE454 0.01%, #F6423C 27.08%, #C2248F 61.98%, #1E4FAD 85.42%);
+    }
+
+}
+
+.line{
+    background: #22BA4F;
+    &:hover{
+        background: #22BA4F;
+    }
+}
+.talk{
+    background: #FFE812;
+    .ShareTxt{
+        color: #3a3a3a;
+    }
+    &:hover{
+        background: #FFE812;
+    }
+}
+.vk{
+    background: #5181B8;
+    &:hover{
+        background: #5181B8;
+    }
+}
+
+.scoreBoard {
+    padding: 0px 20px 14px;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 10px;
+    background: $cardBg;
+}
+
+.AnsR{
+    &.active{
+        background: #38c172;
+        color: $white;
+            font-weight: bold;
+    }
+    
+}
+
+.complate-card{
+    @extend .p2014;
+    background: $cardBg;
+    border-radius: $radius10;
+}
+.scoreTableHeader{
+    @extend .flex-center;
+    justify-content: space-between;
+    span{
+        font-weight: 600;
+        &:nth-child(1){
+            margin-left: 30px;
+        }
+    }
+}
+.scoreImg{
+    width: 20px;
+    margin-right: 10px;
+}
+.ScoreRow{
+    @extend .flex-center;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 10px;
+}
+.max-350{
+    max-width: 350px;
+}
+
+.viewAnsCard{
+    @extend .p2014;
+    background: $cardBg;
+    border-radius: $radius10;
+    position: relative;
+    .subheading{
+        font-size: 22px;
+    }
+}
+.viewansCount{
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background:$BtnColor;
+        color: $white;
+        font-weight: bold;
+        left: calc(50% - 13px);
+        top: -13px;
+        @extend .flex-center;
+        border-radius: $radius50;
+}
+.viewAnsCard{
+        .GridTxt{
+            text-align: center;
+            padding: 8px;
+        }
+        .GridCard{
+            margin: 0 auto;
+            background: #e74848;
+            &.active{
+                background: #379747;
+            }
+        }
+}
+.ansCardSec{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    .SingleCard{
+        background: #e74848;
+        text-align: center;
+            font-weight: bold;
+            color: $white;
+            &.active{
+                background: #379747;
+            }
     }
 }

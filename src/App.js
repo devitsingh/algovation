@@ -13,7 +13,6 @@ function App() {
          <Header />
          <Content />
          <Footer />
-         <AddBanner path="/164808479/Leaderboard" Width="728"  Height="90"  id="div-gpt-ad-1536172937182-0"  />
     </div>
 
     

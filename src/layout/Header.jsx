@@ -8,13 +8,19 @@ import "../assets/js/header.js";
 import { NavLink, Link } from 'react-router-dom';
 
 const Header = () => {
+    const SlideMenu = event => {
+            let btn = event.currentTarget;
+            let Nav = document.querySelector(".slideMenu");
+            btn.classList.toggle("active");
+            Nav.classList.toggle("active");
+    }
 
     return (
         <>
             <Navbar className="headerSec">
                 <Container fluid>
                     <Col>
-                        <button className="menuNav">
+                        <button className="menuNav" onClick={SlideMenu}>
                             <span></span>
                             <span></span>
                             <span></span>
@@ -27,7 +33,22 @@ const Header = () => {
                                         <NavLink exact to="/" className="menuItem" activeClassName="active_menu">Home</NavLink>
                                     </li>
                                     <li className="slideli">
-                                        <NavLink exact to="/question" className="menuItem" activeClassName="active_menu">Question</NavLink>
+                                        <NavLink exact to="/social" className="menuItem" activeClassName="active_menu">Social</NavLink>
+                                    </li>
+                                    <li className="slideli">
+                                        <NavLink exact to="/privacy" className="menuItem" activeClassName="active_menu">Privacy</NavLink>
+                                    </li>
+                                    <li className="slideli">
+                                        <NavLink exact to="/faq" className="menuItem" activeClassName="active_menu">FAQ's</NavLink>
+                                    </li>
+                                    <li className="slideli">
+                                        <NavLink exact to="/terms-&-conditions" className="menuItem" activeClassName="active_menu">Terms & Conditions</NavLink>
+                                    </li>
+                                    <li className="slideli">
+                                        <NavLink exact to="/about" className="menuItem" activeClassName="active_menu">About us</NavLink>
+                                    </li>
+                                    <li className="slideli">
+                                        <NavLink exact to="/contact" className="menuItem" activeClassName="active_menu">Contact us</NavLink>
                                     </li>
                                 </ul>
                             </div>
@@ -35,9 +56,9 @@ const Header = () => {
 
                     </Col>
                     <Col className="text-center">
-                        <a href="/">
+                        <Link to="/">
                             <img src={Logo} alt="logo" className="logoImg" />
-                        </a>
+                        </Link>
                     </Col>
                     <Col className="text-right">
                         <button className="btn">
