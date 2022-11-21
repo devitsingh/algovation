@@ -1,11 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import CustomAd from "../../component/CustomAd";
-import Add from "../../assets/img/add.jpeg";
+import Add from "../../assets/img/add.png";
 import AddBanner from "../../component/Addbanner";
 import FormSec from "../../component/FormSec";
 import data from "../../assets/js/data";
+import apis from "../../assets/js/api";
+import Custom from "../../assets/js/Custom";
+
 
 const Home = () => {
+    
+    // let [apiQues, setApiQes] = useState();
+    // const axios = require('axios');
+    // const response = await axios.get(apis.question);
+
+    // let data =  fetchData(apis.question)
+    // data.then((response) => console.log(response[0]))
+    // .catch((error) => {
+    //         console.log(error);
+    // })
     let Home_Data = data.Home;
     return (
         <>

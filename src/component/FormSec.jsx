@@ -23,9 +23,9 @@ const FormSec = (props) => {
         return(
                     <React.Fragment>
                             <Form id={props.action} onSubmit={handleSubmit(handleRegistration, handleError)}>
-                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Group className="mb-3 p-relative" controlId="formBasicEmail">
                                     <Form.Control type="text" placeholder={props.placeholder} name="name" {...register('name', registerOptions.name)} className="inputForm" />
-                                    <span className="text-danger text-center d-block">{errors ?.name && errors.name.message}</span>
+                                    <span className="errorMsg text-center d-block">{errors ?.name && errors.name.message}</span>
                                 </Form.Group>
                                 <Button variant="default"  className="primary-btn" type="submit">{props.Button} </Button>
                             </Form>
