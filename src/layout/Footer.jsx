@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import Insta from "../assets/img/insta.png";
 import Twitter from "../assets/img/twitter.png";
 import Facebook from "../assets/img/facebook.png";
+import LanguageModal from "../component/LanguageModal";
+import Button from 'react-bootstrap/Button';
+
 
 const Footer = () => {
+    const [modalShow, setModalShow] = useState(false);
+
     return (
         <>
             <footer className="footer-sec text-center">
@@ -14,7 +19,7 @@ const Footer = () => {
                             <a href="" className="footer-link">
                                 Contact Us
                             </a>
-                            <a href="" className="footer-link">
+                            <a href className="footer-link" onClick={() => setModalShow(true)}>
                                 Language
                             </a>
                 </div>
@@ -30,8 +35,10 @@ const Footer = () => {
                     </a>
                     
                 </div>
-                <p className="footer-text mt-4">DISCLAIMER: ALL CONTENT IS PROVIDED FOR FUN AND ENTERTAINMENT PURPOSES ONLY</p>
-                <p className="footer-text mb-4"> © 2022 HEYMATES ALL RIGHTS RESERVED</p>
+                <p className="footer-text mt-2">DISCLAIMER: ALL CONTENT IS PROVIDED FOR FUN AND ENTERTAINMENT PURPOSES ONLY</p>
+                <p className="footer-copyright mb-4"> © 2022 HEYMATES ALL RIGHTS RESERVED</p>
+                <LanguageModal show={modalShow}
+                onHide={() => setModalShow(false)} />
             </footer>
         </>
     )

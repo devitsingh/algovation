@@ -11,8 +11,8 @@ export const data = {
                         "They will try to guess the correct answers.",
                         "Check their scores on the scoreboard."
                 ],
-                "placeholder" : "✍🏻 Enter your name ",
-                "button" : "👉🏻 Start 👈🏻"
+                "placeholder" : "Enter Your Name",
+                "button" : "CONFIRM"
     },
 
     "Share" : {

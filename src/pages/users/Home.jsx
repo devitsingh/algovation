@@ -22,13 +22,8 @@ const Home = () => {
     let Home_Data = data.Home;
     return (
         <>
-            
-            <div className="home-content">
-                <h1 className="heading mb-25">{Home_Data.heading}</h1>
-                <h2 className="subheading">{Home_Data.subheading}</h2>
-                <ul className="list-style">
-                    {Home_Data.list_data.map((list) => (<li className="text-p">{list}</li>))}
-                </ul>
+            <AddBanner path="/1234/travel/asia/food" id="banner2" Width={468} Height={100} />
+            <div className="home-content">  
                 <FormSec Button={Home_Data.button} placeholder={Home_Data.placeholder} action="home" navigates="question" />
             </div>
 

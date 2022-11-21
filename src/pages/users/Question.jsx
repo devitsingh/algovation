@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import AddBanner from "../../component/Addbanner";
 import CustomAd from "../../component/CustomAd";
-import Add from "../../assets/img/add.jpeg";
+import Add from "../../assets/img/add.png";
 import Options from "../../component/Options";
 import Questions from "../../assets/js/questions";
 import { useHistory } from "react-router-dom";
@@ -85,7 +85,7 @@ const Question = () => {
                 </div>
                 <div className="question-sec text-center">
                     <p className="question">{currentQuestion.user_text}</p>
-                    <button className="btn m-auto skip-btn" onClick={() => skipHandler(currentQuestion)}>Skip</button>
+                    
                     <div className={(currentQuestion.type === "media") ? "grid-line-ans" : "single-line-ans"}>
                            {
                             opSort.map((option) => {
@@ -95,6 +95,7 @@ const Question = () => {
                                     })
                         }
                     </div>
+                    <button className="btn m-auto skip-btn" onClick={() => skipHandler(currentQuestion)}>Skip</button>
                 </div>
 
             </div>
