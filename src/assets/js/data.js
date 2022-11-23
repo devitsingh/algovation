@@ -16,13 +16,14 @@ export const data = {
     },
 
     "Share" : {
-                "heading" : "🥳CONGRATS!🥳",
+                "heading" : "Congrats",
                 "subheading" : "Your quiz is ready!",
-                "subtitle" : "Share this link with your friends!",
+                "subtitle" : "Can your friends answer the questions?",
                 "copyLink" : "https://heymates.me/en/accept/c1euf",
-                "button" : "Copy Link",
+                "button" : "COPY LINK",
                 "scoreboard" : {
-                            "error" : "No one has played your quiz yet... Share your link!"
+                            "error" : "No one has played your quiz yet... Share your link!",
+                            "type" : 1
                 }
     },
 
@@ -35,8 +36,8 @@ export const data = {
                     "Check your score at the scoreboard.",
                     "Create your own quiz."
             ],
-            "placeholder" : "✍🏻 Enter your name ",
-            "button" : "👉🏻 Start 👈🏻"
+            "placeholder" : "Enter Your Name",
+            "button" : "CONFIRM"
     },
     "Complated" : {
                     "heading" : "🥳Congrats🥳",

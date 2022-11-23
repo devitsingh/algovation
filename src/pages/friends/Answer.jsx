@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AddBanner from "../../component/Addbanner";
 import CustomAd from "../../component/CustomAd";
-import Add from "../../assets/img/add.jpeg";
+import Add from "../../assets/img/add.png";
 import Options from "../../component/Options";
 import { useHistory } from "react-router-dom";
 import Questions from "../../assets/js/questions";

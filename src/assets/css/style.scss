@@ -5,10 +5,11 @@ body {
     background: $bgColor;
 }
 
-.mb-18{
+.mb-18 {
     margin-bottom: 18px;
 }
-.logoLink{
+
+.logoLink {
     font-size: 20px;
     text-decoration: none;
     color: $primTxt;
@@ -114,9 +115,10 @@ body {
     max-width: 400px;
 }
 
-.p2014{
+.p2014 {
     padding: 20px 14px;
 }
+
 .bestFriendCard {
     margin-top: 20px;
     background: $cardBg;
@@ -180,10 +182,12 @@ body {
 .mb-6 {
     margin-bottom: 60px;
 }
-.p-relative{
+
+.p-relative {
     position: relative;
 }
-.errorMsg{
+
+.errorMsg {
     position: absolute;
     width: 100%;
     font-size: 16px;
@@ -221,24 +225,25 @@ body {
     line-height: $lheight25;
     margin: 0px;
     font-weight: bold;
-    color: $txtPrim;
+    color: $primTxt;
 }
 
 .text-p {
     font-size: $font16;
     line-height: $lheight18;
     margin: 0px;
-    font-weight: normal;
-    color: $txtPrim;
+    font-weight: 500;
+    color: $primTxt;
 }
 
-.enterImg{
+.enterImg {
     position: absolute;
     top: 18px;
     left: 21px;
     width: 20px;
     height: 20px;
-}   
+}
+
 .inputForm {
     margin: 0 auto;
     font-size: $font16;
@@ -284,27 +289,30 @@ body {
     padding: 16px;
     color: $black;
     background: $footerBg;
+
     .footer-text {
         margin: 0px;
         font-size: 12px;
         color: $primTxt;
     }
-    .footer-links{
-           @extend .flex-center;
-            gap: 24px;
-            margin-bottom: 18px;
-            .footer-link{
-                color: $primTxt;
-                font-size: 12px;
-                font-weight: 500;
-                cursor: pointer;
-            }
+
+    .footer-links {
+        @extend .flex-center;
+        gap: 24px;
+        margin-bottom: 18px;
+
+        .footer-link {
+            color: $primTxt;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+        }
     }
 
-    .footer-copyright{
-            font-size: 10px;
-            margin-top: 12px;
-            color: $primTxt;
+    .footer-copyright {
+        font-size: 10px;
+        margin-top: 12px;
+        color: $primTxt;
     }
 
 
@@ -348,13 +356,15 @@ body {
     }
 }
 
-.question-content{
+.question-content {
     padding: $ptb18 0px;
 }
+
 .question-sec {
     position: relative;
     margin-top: 20px;
-    .skip-btn{
+
+    .skip-btn {
         max-width: 160px;
         width: 100%;
         height: 40px;
@@ -374,41 +384,47 @@ body {
     line-height: $lheight30;
     margin-bottom: 15px;
 }
-.SingleCard{
-        padding: 8px;
-        background: $ansBg;
-        font-size: $font16;
-        text-align: center;
-        @extend .flex-center;
-        border-radius: $radius10;
-        cursor: pointer;
-        &.active{
+
+.SingleCard {
+    padding: 8px;
+    background: $ansBg;
+    font-size: $font16;
+    text-align: center;
+    @extend .flex-center;
+    border-radius: $radius10;
+    cursor: pointer;
+
+    &.active {
+        color: $white;
+        font-weight: bold;
+
+        .cardTxtType {
+            background: $primBg;
             color: $white;
             font-weight: bold;
-            .cardTxtType{
-                background: $primBg;
-                color: $white;
-                font-weight: bold;
-                .userTypeImg{
-                    position: absolute;
-                    right: 8px;
-                    width: 33px;
-                    height: 33px;
-                    display: block;
-                    top: 7px;
-                }
-               
+
+            .userTypeImg {
+                position: absolute;
+                right: 8px;
+                width: 33px;
+                height: 33px;
+                display: block;
+                top: 7px;
             }
+
         }
+    }
 }
-.single-line-ans{
+
+.single-line-ans {
     @extend .flex-center;
     flex-direction: column;
     align-items: unset;
     gap: 15px;
     margin-top: 20px;
 }
-.GridCard{
+
+.GridCard {
     max-width: calc(50% - 16px);
     background: $ansBg;
     border-radius: $radius18;
@@ -416,6 +432,7 @@ body {
     cursor: pointer;
     position: relative;
     width: 100%;
+
     .userSelectedM {
         position: absolute;
         width: 100%;
@@ -427,18 +444,25 @@ body {
         border-radius: 18px;
         display: none;
     }
-    &.active{
-            .userSelectedM{
-                display: flex;
+
+    &.active {
+        .userSelectedM {
+            display: flex;
+
+            .userMediaSideImg {
+                display: inline-block;
             }
-            
+        }
+
     }
-    .GridImg{
-            width: 100%;
+
+    .GridImg {
+        width: 100%;
     }
 
 }
-.answerImg{
+
+.answerImg {
     width: 100%;
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.25));
     border-radius: 6px;
@@ -446,302 +470,490 @@ body {
     height: 179px;
     object-fit: cover;
 }
+
 .mediaImg {
     padding: 8px;
     background: $white;
     border-radius: 14px;
-}   
-.AnsW{
+}
+
+.AnsW {
     background: #e3342f;
-    .CardTxt{
+
+    .CardTxt {
         font-weight: bold;
         color: $white;
         font-size: $font20
     }
 }
 
-.grid-line-ans{
+.grid-line-ans {
     @extend .flex-center;
     flex-wrap: wrap;
     gap: 16px;
     align-items: unset;
     margin-top: 20px;
 }
-.CardTxt{
+
+.CardTxt {
     margin: 0px;
     padding: 9px 0px;
     font-size: $font20;
     color: $primTxt;
     font-weight: 400;
-    &.cardTxtType{
+
+    &.cardTxtType {
         width: 100%;
         background: #fff;
         border-radius: 10px;
         position: relative;
-        .userTypeImg{
+
+        .userTypeImg {
             display: none;
         }
     }
-   
+
 }
-.shareCom{
+
+.share-content {
+    margin-top: 30px
+}
+
+.shareCom {
     @extend .p2014;
     position: relative;
-    background: $cardBg;
 }
-.copyInput{
+
+.shareTitle {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: $primTxt;
+}
+
+.copyInput {
     padding: 5px;
-    color: $black;
+    color: $primTxt;
     border-radius: $radius10;
-    height: 44px;
+    height: 45px;
     line-height: 32px;
     background: $white;
     border: 1px solid #BBBBBB;
     width: 100%;
     text-align: center;
     resize: none;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 400;
 }
-.max-438{
+
+.max-196 {
+    max-width: 196px;
+}
+
+.max-438 {
     max-width: 438px;
 }
-.shareBtn{
+
+.shareBtn {
     @extend .flex-center;
-    border-radius: $radius10;
+    border-radius: 43px;
     width: calc(50% - 5px);
     padding: 0px 3px;
-    height: 46px;
-    &:nth-child(1){
+    height: 44px;
+
+    &:nth-child(1) {
         width: 100%;
     }
-    .ShareTxt{
-        font-size: 16px;
+
+    .ShareTxt {
+        font-size: 20px;
         color: $white;
-        font-weight: bold;
+        font-weight: 400;
         margin-left: 5px;
         display: inline-block;
     }
-    .shareLink{
+
+    .shareLink {
         text-decoration: none;
+
+        img {
+            margin-right: 8px;
+        }
     }
 }
+
 .shareGrid {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
-.whatsapp{
-    background: #0b8f21;
-    &:hover{
-        background: #0b8f21;
-    }
+.whatsapp {
+    background: #0B8F21 !important;
+    border: none;
 }
 
-.fb{
-    background: #1E4FAD;
-    &:hover{
-        background: #1E4FAD;
-    }  
+.fb {
+    background: #1E4FAD !important;
 }
-.snap{
-    background: #FEFB01;
-    .ShareTxt{
+
+.snap {
+    background: #FEFB01 !important;
+
+    .ShareTxt {
         color: #3a3a3a;
     }
-    &:hover{
-        background: #FEFB01;
-    }  
 }
-.messanger{
-    background: #0084FF;
-    &:hover{
-        background: #0084FF;
-    }
+
+.messanger {
+    background: #0084FF !important;
 }
-.twitter{
-    background: #1BA5D4;
-    &:hover{
-        background: #1BA5D4;
-    }
+
+.twitter {
+    background: #1BA5D4 !important;
+    border: none;
 }
-.insta{
+
+.insta {
     background: linear-gradient(270deg, #FEE455 0%, #FEE454 0.01%, #F6423C 27.08%, #C2248F 61.98%, #1E4FAD 85.42%);
-    &:hover{
+
+    &:hover {
         background: linear-gradient(270deg, #FEE455 0%, #FEE454 0.01%, #F6423C 27.08%, #C2248F 61.98%, #1E4FAD 85.42%);
     }
 
 }
 
-.line{
-    background: #22BA4F;
-    &:hover{
-        background: #22BA4F;
-    }
+.line {
+    background: #22BA4F !important;
 }
-.talk{
-    background: #FFE812;
-    .ShareTxt{
+
+.talk {
+    background: #FFE812 !important;
+
+    .ShareTxt {
         color: #3a3a3a;
     }
-    &:hover{
-        background: #FFE812;
+}
+
+.vk {
+    background: #5181B8 !important;
+}
+
+.scoreItem {
+    padding: 4px 25px 6px 25px;
+    background: $white;
+    border-radius: $radius14;
+
+    .scorerName {
+        text-align: initial;
+
+        .scorerLink {
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            color: $primTxt;
+            line-height: $lheight25;
+        }
+    }
+
+    .scoreCount {
+        font-size: 16px;
+        font-weight: 700;
     }
 }
-.vk{
-    background: #5181B8;
-    &:hover{
-        background: #5181B8;
+
+.scoreStep {
+    width: 14px;
+    height: 7px;
+    border-radius: 3px;
+    border: 1px solid $primBg;
+    display: inline-block;
+
+    &.active {
+        background: $primBg;
     }
+}
+
+.scoreStepSec {
+    display: flex;
+    gap: 3px;
+}
+
+.scoreCounter {
+    @extend .flex-center;
+    justify-content: space-between;
 }
 
 .scoreBoard {
-    padding: 0px 20px 14px;
-    margin-top: 20px;
     position: relative;
-    border-radius: 10px;
-    background: $cardBg;
+
+    .scoreCard {
+        padding: 20px 5px;
+        background: $ansBg;
+        border-radius: $radius14;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .scoreErrorCard {
+            background: $white;
+            padding: 10px 20px;
+            border-radius: $radius14;
+            height: 87px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
 
-.AnsR{
-    &.active{
+.scoreTitle {
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $primTxt;
+}
+
+.AnsR {
+    &.active {
         background: #38c172;
         color: $white;
-            font-weight: bold;
+        font-weight: bold;
     }
-    
+
 }
 
-.complate-card{
+.complate-card {
     @extend .p2014;
     background: $cardBg;
     border-radius: $radius10;
 }
-.scoreTableHeader{
-    @extend .flex-center;
-    justify-content: space-between;
-    span{
-        font-weight: 600;
-        &:nth-child(1){
-            margin-left: 30px;
-        }
-    }
-}
-.scoreImg{
+
+.scoreImg {
     width: 20px;
     margin-right: 10px;
 }
-.ScoreRow{
-    @extend .flex-center;
-    justify-content: space-between;
-    gap: 5px;
-    margin-top: 10px;
-}
-.max-350{
+
+.max-350 {
     max-width: 350px;
 }
 
-.viewAnsCard{
+.viewAnsCard {
     @extend .p2014;
     background: $cardBg;
     border-radius: $radius10;
     position: relative;
-    .subheading{
+
+    .subheading {
         font-size: 22px;
     }
 }
-.viewansCount{
-        position: absolute;
-        width: 26px;
-        height: 26px;
-        background:$BtnColor;
-        color: $white;
-        font-weight: bold;
-        left: calc(50% - 13px);
-        top: -13px;
-        @extend .flex-center;
-        border-radius: $radius50;
+
+.viewansCount {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: $BtnColor;
+    color: $white;
+    font-weight: bold;
+    left: calc(50% - 13px);
+    top: -13px;
+    @extend .flex-center;
+    border-radius: $radius50;
 }
-.viewAnsCard{
-        .GridTxt{
-            text-align: center;
-            padding: 8px;
-        }
-        .GridCard{
-            margin: 0 auto;
-            background: #e74848;
-            &.active{
-                background: #379747;
-            }
-        }
-}
-.ansCardSec{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    .SingleCard{
-        background: #e74848;
+
+.viewAnsCard {
+    .GridTxt {
         text-align: center;
-            font-weight: bold;
-            color: $white;
-            &.active{
-                background: #379747;
-            }
+        padding: 8px;
+    }
+
+    .GridCard {
+        margin: 0 auto;
+        background: #e74848;
+
+        &.active {
+            background: #379747;
+        }
     }
 }
 
-.correctAns{
-    background: #379747;
-}
-.Incorrect{
-    background: #e74848;
+.ansCardSec {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .SingleCard {
+        background: #e74848;
+        text-align: center;
+        font-weight: bold;
+        color: $white;
+
+        &.active {
+            background: #379747;
+        }
+    }
 }
 
-.loaderSec{
+
+.Incorrect {
+    .userSelectedM {
+        display: flex;
+        left: 0;
+        background: rgba(198, 82, 89, 0.7);
+
+        .mediaWrongAns {
+            display: inline-block;
+        }
+    }
+
+    .cardTxtType {
+        background: #C65259;
+        color: $white;
+
+        .worngAns {
+            display: inline-block;
+        }
+    }
+}
+
+.correctAns {
+    .userSelectedM {
+        display: flex;
+        left: 0;
+        background: rgba(108, 195, 100, 0.7);
+
+        .mediaRightAns {
+            display: inline-block;
+        }
+    }
+
+    .cardTxtType {
+        background: #6CC364;
+        color: $white;
+
+        .rightAns {
+            display: inline-block;
+        }
+    }
+}
+
+.imgPosition {
+    position: absolute;
+    right: 8px;
+    width: 33px;
+    height: 33px;
+    top: 7px;
+}
+
+.userMediaSideImg,
+.worngAns,
+.rightAns,
+.mediaWrongAns,
+.mediaRightAns {
+    display: none;
+}
+
+.loaderSec {
     width: 100%;
     height: 300px;
-   @extend .flex-center;
+    @extend .flex-center;
 }
-.modal{
+
+.modal {
     padding-right: 0px !important;
-    .modal-dialog{
+
+    .modal-dialog {
         padding: 50px 16px;
         margin: 0 auto;
     }
 }
-.modal-header-sec{
+
+.modal-header-sec {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 32px;
-    .modal-h1{
+
+    .modal-h1 {
         font-size: 20px;
         font-weight: 500;
         color: $primTxt;
     }
 }
-.closeModal{
+
+.closeModal {
     width: 18px;
     cursor: pointer;
 }
-.modal-body-sec{
+
+.modal-body-sec {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    .lang-btn{
+
+    .lang-btn {
         width: 100%;
         height: 44px;
         border: 2px solid $primTxt;
         border-radius: $radius38;
         font-size: 14px;
-        color:$primTxt;
+        color: $primTxt;
         font-weight: 500;
         background: none;
-        &.active{
+
+        &.active {
             background: $primBg;
             color: $white;
             border: 2px solid $primBg;
             font-weight: 700;
         }
     }
+}
+
+.userdelModal {
+    .modal-content {
+        background: $ansBg;
+    }
+
+    .modal-header-sec {
+        position: relative;
+
+        .modal-h1 {
+            font-size: 16px;
+            font-weight: 400;
+            width: calc(100% - 28px);
+            text-align: center;
+        }
+
+        .closeModal {
+            position: absolute;
+            right: 0px;
+        }
+    }
+
+    .modal-body-sec {
+        padding: 0px 10px;
+        justify-content: center;
+    }
+
+    .primary-btn {
+        height: 39px;
+        max-width: 127px;
+        margin: 0px;
+    }
+}
+
+.outlineBtn {
+    outline: none;
+    height: 39px;
+    max-width: 127px;
+    width: 100%;
+    border: 1px solid #4E7BAF;
+    background: #fff;
+    border-radius: 97px;
+    font-size: 20px;
+    font-weight: 400;
 }

@@ -2,6 +2,14 @@ import React, {useState, useRef} from "react";
 import Button from 'react-bootstrap/Button';
 import { ShareButton } from "./ShareButton";
 import whatsapp from "../assets/img/whatsapp.png";
+import facebook from "../assets/img/facebookS.png";
+import twitter from "../assets/img/twitterS.png";
+import messanger from "../assets/img/messanger.png";
+import snap from "../assets/img/snap.png";
+import insta from "../assets/img/instaS.png";
+import line from "../assets/img/line.png";
+import talk from "../assets/img/talk.png";
+import vk from "../assets/img/vk.png";
 
 export const ShareCard = (props) => {
     const [copySuccess, setCopySuccess] = useState('');
@@ -15,23 +23,24 @@ export const ShareCard = (props) => {
     }
     return (
         <React.Fragment>
-                     <div className="shareCom mt-3">
-                                <p className="text-p mt-2">{props.title}</p>  
+                     <div className="shareCom">
                                 <div className="copySec">
-                                        <textarea className="copyInput mt-3 mb-3" readOnly="yes" ref={textAreaRef}>{props.link}</textarea>
-                                        <Button variant="default"  className="primary-btn" type="submit" onClick={copyToClipboard}>{props.button}</Button>
-                                        <p className="text-center">{copySuccess}</p>
+                                        <textarea className="copyInput" readOnly="yes" ref={textAreaRef}>{props.link}</textarea>
+                                        <Button variant="default"  className="primary-btn max-196" type="submit" onClick={copyToClipboard}>{props.button}</Button>
+                                        {
+                                            // <p className="text-center">{copySuccess}</p>
+                                        }
                                 </div>
                                 <div className="shareGrid">
-                                                <ShareButton src={whatsapp} ShareType="whatsapp" text="Set Status" />
-                                                <ShareButton src={whatsapp} ShareType="fb" text="Share" />
-                                                <ShareButton src={whatsapp} ShareType="snap" text="Snapchat" /> 
-                                                <ShareButton src={whatsapp} ShareType="messanger" text="Share" /> 
-                                                <ShareButton src={whatsapp} ShareType="twitter" text="Share" /> 
-                                                <ShareButton src={whatsapp} ShareType="insta" text="Add to Bio" /> 
-                                                <ShareButton src={whatsapp} ShareType="line" text="Share" /> 
-                                                <ShareButton src={whatsapp} ShareType="talk" text="Share" /> 
-                                                <ShareButton src={whatsapp} ShareType="vk" text="Share" /> 
+                                                <ShareButton src={whatsapp} ShareType="whatsapp" text="Share" />
+                                                <ShareButton src={facebook} ShareType="fb" text="Share" />
+                                                <ShareButton src={twitter} ShareType="twitter" text="Share" /> 
+                                                <ShareButton src={messanger} ShareType="messanger" text="Share" /> 
+                                                <ShareButton src={snap} ShareType="snap" text="Share" /> 
+                                                <ShareButton src={insta} ShareType="insta" text="Share" /> 
+                                                <ShareButton src={line} ShareType="line" text="Share" /> 
+                                                <ShareButton src={talk} ShareType="talk" text="Share" /> 
+                                                <ShareButton src={vk} ShareType="vk" text="Share" /> 
                                 </div>
                                 
                      </div>

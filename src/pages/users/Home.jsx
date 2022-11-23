@@ -9,16 +9,6 @@ import Custom from "../../assets/js/Custom";
 
 
 const Home = () => {
-    
-    // let [apiQues, setApiQes] = useState();
-    // const axios = require('axios');
-    // const response = await axios.get(apis.question);
-
-    // let data =  fetchData(apis.question)
-    // data.then((response) => console.log(response[0]))
-    // .catch((error) => {
-    //         console.log(error);
-    // })
     let Home_Data = data.Home;
     return (
         <>

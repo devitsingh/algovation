@@ -1,6 +1,10 @@
 import React, {useState} from "react";
 import userSelected from "../assets/img/user-check-icon.png";
 import userTypeTxt from "../assets/img/text-ans-check.png";
+import MediaWrongAns from "../assets/img/mediaWrongAns.png";
+import MediaRightAns from "../assets/img/mediaRightAns.png";
+import worngAns from "../assets/img/worngAns.png";
+import rightAns from "../assets/img/rightAns.png";
 
 const Options = (props) => {
     const [imgSrc, setImgSrc] = useState(props.userAnsImg);
@@ -11,7 +15,12 @@ const Options = (props) => {
                                         {  (props.type === "media") ? <div className="mediaImg"><img src={imgSrc} onError = {() => setImgSrc("https://picsum.photos/200")} className="answerImg" /></div> : ""}      
                                         <div className={`CardTxt ${(props.type !== "media") ? 'cardTxtType' : ''}` }>{props.userAnswer}
                                             {
-                                                (props.type !== "media") ? <img src={userTypeTxt} className="userTypeImg" /> : ""
+                                                (props.type !== "media") ?
+                                                <span>
+                                                    <img src={userTypeTxt} className="userTypeImg" />
+                                                    <img src={worngAns} className="worngAns imgPosition" /> 
+                                                    <img src={rightAns} className="rightAns imgPosition" />
+                                                </span> : ""
                                             }
                                         </div>
                                         {
@@ -19,7 +28,9 @@ const Options = (props) => {
                                         }
                                         {  (props.type === "media") ?
                                             <div className="userSelectedM">
-                                                    <img src={userSelected} alt="" />
+                                                    <img src={userSelected} alt="" className="userMediaSideImg" />
+                                                    <img src={MediaWrongAns} alt="" className="mediaWrongAns" />
+                                                    <img src={MediaRightAns} alt="" className="mediaRightAns" />
                                             </div>
                                             :
                                             ""
