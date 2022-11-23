@@ -5,7 +5,7 @@ import Routes from "../Routes/Routes";
 const Content = () => {
     return (
         <>
-            <div className="offset-md-3 offset-lg-4 col-md-6 col-lg-4 col-sm-12">
+            <div className="main-sec max-438 m-auto">
                 <Routes />
             </div>
         </>

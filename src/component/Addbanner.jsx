@@ -27,7 +27,8 @@ const AddBanner = (props) => {
     <>
       <div
         id={props.id}
-        style={{ width: props.Width + 'px', height: props.Height + 'px' }}
+        className="m-auto"
+        style={{ 'max-width': props.Width + 'px', height: props.Height + 'px' }}
       />
 
     </>

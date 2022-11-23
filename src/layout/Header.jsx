@@ -8,42 +8,24 @@ import "../assets/js/header.js";
 import { NavLink, Link } from 'react-router-dom';
 
 const Header = () => {
+    const SlideMenu = event => {
+            let btn = event.currentTarget;
+            let Nav = document.querySelector(".slideMenu");
+            btn.classList.toggle("active");
+            Nav.classList.toggle("active");
+    }
 
     return (
         <>
             <Navbar className="headerSec">
                 <Container fluid>
-                    <Col>
-                        <button className="menuNav">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-
-                        <Row className="slideMenu">
-                            <div className="slideMenuInner">
-                                <ul className="slideUl">
-                                    <li className="slideli">
-                                        <NavLink exact to="/" className="menuItem" activeClassName="active_menu">Home</NavLink>
-                                    </li>
-                                    <li className="slideli">
-                                        <NavLink exact to="/question" className="menuItem" activeClassName="active_menu">Question</NavLink>
-                                    </li>
-                                </ul>
-                            </div>
-                        </Row>
-
-                    </Col>
                     <Col className="text-center">
-                        <a href="/">
-                            <img src={Logo} alt="logo" className="logoImg" />
-                        </a>
+                        <Link to="/" className="logoLink">
+                           {/* <img src={Logo} alt="logo" className="logoImg" /> */}
+                           <div className="logo-title">GAME NAME</div>
+                        </Link>
                     </Col>
-                    <Col className="text-right">
-                        <button className="btn">
-                            Globe
-                        </button>
-                    </Col>
+                    
                 </Container>
             </Navbar>
         </>
