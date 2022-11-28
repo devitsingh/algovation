@@ -209,13 +209,14 @@ body {
     border-radius: $radius38;
     font-weight: bold;
     text-shadow: 0px 4px 2px #1b1b1b33;
+    text-decoration: none;
 }
 
 .heading {
-    font-weight: bold;
-    font-size: $font32;
+    font-weight: 500;
+    font-size: $font22;
     line-height: $lheight36;
-    color: $txtPrim;
+    color: $primTxt;
     text-align: center;
     margin: 0px;
 }
@@ -348,9 +349,18 @@ body {
         color: $primTxt;
         width: 100%;
         max-width: 30px;
-
-        &.active {
+        &.active{
             background: $primBg;
+            color: $white;
+        }
+        &.ansIncorrect {
+            background: #C65259;
+            border: 2px solid #C65259;
+            color: $white;
+        }
+        &.ansCorrect {
+            background: #6CC364;
+            border: 2px solid #6CC364;
             color: $white;
         }
     }
@@ -545,6 +555,7 @@ body {
     margin-bottom: 7px;
     font-size: 14px;
     font-weight: 400;
+    overflow: hidden;
 }
 
 .max-196 {
@@ -714,6 +725,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     color: $primTxt;
+    text-align: center;
 }
 
 .AnsR {
@@ -727,8 +739,6 @@ body {
 
 .complate-card {
     @extend .p2014;
-    background: $cardBg;
-    border-radius: $radius10;
 }
 
 .scoreImg {
@@ -741,27 +751,30 @@ body {
 }
 
 .viewAnsCard {
-    @extend .p2014;
-    background: $cardBg;
-    border-radius: $radius10;
+    border-radius: $radius18;
+    padding: 18px 9px 18px;
     position: relative;
+    border: 1px solid $primBg;
 
     .subheading {
         font-size: 22px;
+        font-weight: 500;
+        margin: 18px 0px;
     }
 }
 
 .viewansCount {
     position: absolute;
-    width: 26px;
-    height: 26px;
-    background: $BtnColor;
+    width: 29px;
+    height: 30px;
     color: $white;
     font-weight: bold;
     left: calc(50% - 13px);
-    top: -13px;
+    top: -15px;
     @extend .flex-center;
-    border-radius: $radius50;
+    background: $primBg;
+    border: 2px solid $primBg;
+    border-radius: 5px;
 }
 
 .viewAnsCard {
@@ -780,10 +793,16 @@ body {
     }
 }
 
+.view-answer{
+    .heading{
+        margin-bottom: 50px;
+    }
+}
 .ansCardSec {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin-bottom: 18px;
 
     .SingleCard {
         background: #e74848;
@@ -796,7 +815,87 @@ body {
         }
     }
 }
+.viewAnsOverlay{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: $radius18;
+}
 
+.viewAnsGridcard{
+    max-width: 160px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px;
+    border-radius: $radius18;
+    background: $ansBg;
+    position: relative;
+    .viewAnsImgSec{
+        padding: 8px;
+        background: $white;
+        border-radius: $radius14;
+        margin-bottom: 8px;
+        img{
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.25));
+            border-radius: 6px;
+            width: 100%;
+        }
+    }
+    .viewansGridTxt{
+        padding: 0px;
+        background: unset;
+    }
+    &.vAnsCorrect{
+        .viewAnsOverlay{
+            background: rgba(108, 195, 100, 0.5);
+        }
+    }
+    &.vAnsInCorrect{
+        .viewAnsOverlay{
+            background: rgba(198, 82, 89, 0.5);
+        }
+    }
+}
+
+.viewAnsSinglecard{
+    padding: 8px;
+    border-radius: $radius10;
+    background: $ansBg;
+    &.vAnsCorrect{
+        .viewansTxt{
+            background: #6CC364;
+            color: $white;
+            font-weight: 700;
+        }
+    }
+    &.vAnsInCorrect{
+        .viewansTxt{
+            background: #C65259;
+            color: $white;
+            font-weight: 700;
+        }
+    }
+}
+.viewansTxt{
+    font-size: $font20;
+    color: $primTxt;
+    font-weight: 500;
+    padding: 8px;
+    background: $white;
+    border-radius: $radius10;
+    position: relative;
+}
+.txtAnsImg{
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    right: 10px;
+}
 
 .Incorrect {
     .userSelectedM {
@@ -956,4 +1055,65 @@ body {
     border-radius: 97px;
     font-size: 20px;
     font-weight: 400;
+}
+
+
+// complated page css
+.complated-top-title{
+    @extend .flex-center;
+    margin-bottom: 5px;
+    font-size: $font20;
+    font-weight: 700;
+    color: $primTxt;
+}
+.complated-title{
+    font-size: $font22;
+    color: $primTxt;
+    font-weight: 500;
+    text-align: center;
+}
+
+.complated-score-card{
+    display: flex;
+    align-items: center;
+    .score-card-sec{
+        img{
+            width: calc(100% + 40px);
+        }
+    }
+    .score-card-sec{
+        width: 100%;
+        position: relative;
+    }
+    .ScoreCount{
+        position: absolute;
+        top: calc(50% - 45px);
+        left: calc(40% - 48px);
+        font-size: 65px;
+        font-weight: 700;
+        text-shadow: 0px 2px 8px #a9ffd6;
+    }
+}
+
+.share-loader-gif, .complated-loader-gif {
+    width: 160px;
+}
+.share-loader, .complated-loader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    top: 0px;
+    left: 0;
+    background: #e5eff1;
+    z-index: 2;
+}
+.share-loader-txt, .complated-loader-txt{
+    font-size: $font22;
+    color: $primTxt;
+    font-weight: 500;
 }

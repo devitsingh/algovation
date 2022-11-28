@@ -1,8 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import Gmadle from "../assets/img/medals-0.png";
 import ScoreItem from "./ScoreItm";
-import Button from 'react-bootstrap/Button';
-import UserDelModal from "./UserDelModal";
+
 export const ScoreCard = (props) => {
     return (
         <React.Fragment>
@@ -20,7 +19,7 @@ export const ScoreCard = (props) => {
 
 
 export const ScoreTable = () => {
-    const [modalShow, setModalShow] = useState(false);
+   
     return (
         <React.Fragment>
         <div className="scoreBoard">
@@ -31,10 +30,7 @@ export const ScoreTable = () => {
                             <ScoreItem score="7" scorerName="Yasin" viewAnswerLink="d" /> 
                             <p className="scoreTitle">Click on the name to view the user’s answers</p>   
                 </div>
-                <Button variant="default"  className="primary-btn max-196 mt-3" onClick={() => setModalShow(true)}>DELETE</Button>
-
-                <UserDelModal show={modalShow}
-                onHide={() => setModalShow(false)} />
+                
         </div>
         </React.Fragment>
     )

@@ -4,8 +4,10 @@ import Add from "../../assets/img/add.png";
 import AddBanner from "../../component/Addbanner";
 import FormSec from "../../component/FormSec";
 import data from "../../assets/js/data";
-import apis from "../../assets/js/api";
 import Custom from "../../assets/js/Custom";
+
+
+
 
 
 const Home = () => {

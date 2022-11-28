@@ -11,7 +11,6 @@ const Answer = () => {
     let history = useHistory();
     let [qes, setQes] = useState(Questions);
     let [frAns, setFrAns] = useState({});
-    let [currentA, setCurrentA] = useState();
     let [currentVal, setCurrentVal] = useState("");
     let [correctVal, setCorrectVal] = useState("");
     let frCurQus = qes[0];
@@ -28,7 +27,6 @@ const Answer = () => {
         q9 : "id18",
         q10 : "id20",
     }
-    let userAnsId = Object.values(userAns);
     const ansHandler = (opId, cQid) => {
         frAns[`q${cQid}`] = opId;
         setCorrectVal(userAns[`q${cQid}`]);
@@ -37,9 +35,6 @@ const Answer = () => {
                 setQes((cQes) => cQes.filter((Qes) => Qes.id !== cQid));
         }, 1000); 
     }
-
-    console.log(frAns);
-
     let answerLen = (Object.keys(frAns).length);
     setTimeout(() => {
         if(answerLen === 10){
@@ -69,7 +64,7 @@ const Answer = () => {
                     <div className={(frCurQus.type === "media") ? "grid-line-ans" : "single-line-ans"}>
                         { opSort.map((option) => {
                                 return (
-                                    <Options type={frCurQus.type} key={option.id} activeClass="" state="" currectVal ={currentVal} ansVal= {correctVal} currectAns={currentA}  ansId={option.id} userAnswer={option.text} userAnsImg={option.image} onClick={() => ansHandler(option.id, frCurQus.id)} />  
+                                    <Options type={frCurQus.type} key={option.id} activeClass="" state="" currectVal ={currentVal} ansVal= {correctVal}  ansId={option.id} userAnswer={option.text} userAnsImg={option.image} onClick={() => ansHandler(option.id, frCurQus.id)} />  
                                 )
                             })
                         }

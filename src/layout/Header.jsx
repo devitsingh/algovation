@@ -8,13 +8,6 @@ import "../assets/js/header.js";
 import { NavLink, Link } from 'react-router-dom';
 
 const Header = () => {
-    const SlideMenu = event => {
-            let btn = event.currentTarget;
-            let Nav = document.querySelector(".slideMenu");
-            btn.classList.toggle("active");
-            Nav.classList.toggle("active");
-    }
-
     return (
         <>
             <Navbar className="headerSec">

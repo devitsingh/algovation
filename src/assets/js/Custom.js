@@ -16,6 +16,5 @@ let Qdata ;
 
 }
 
-console.log(Qdata);
 
 export default fetchData(apis.question);
