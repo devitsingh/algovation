@@ -43,7 +43,7 @@ export const data = {
                     "heading" : "🥳Congrats🥳",
                     "subheading" : "You scored 5/10 in this quiz about Devit singh.",
                     "title": "Now, it's your turn. Create your own quiz and share it with your friends!",
-                    "button" : "Create Your Own Challenge"
+                    "button" : "CREATE YOUR OWN QUIZ"
     }
 }
 

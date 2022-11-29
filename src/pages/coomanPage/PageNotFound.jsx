@@ -1,11 +1,13 @@
 import React from "react";
 
-const PageNotFound = () => {
-            return(
-                    <>
-                                Page Not Found
-                    </>
-            )
-}
 
+class PageNotFound extends React.Component {
+        render() {
+                return (
+                        <React.Fragment>
+                                Page Not Found
+                        </React.Fragment>
+                )
+        }
+}
 export default PageNotFound;

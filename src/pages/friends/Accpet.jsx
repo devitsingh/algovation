@@ -6,18 +6,20 @@ import FormSec from "../../component/FormSec";
 import data from "../../assets/js/data";
 
 
-const Accpet = () => {
-        let Accpet_Data = data.Accpet;
-        return (
-                <>
-                        <AddBanner path="/1234/travel/asia/food" id="banner2" Width={468} Height={100} />
-                        <div className="home-content">
-                                <FormSec Button={Accpet_Data.button} placeholder={Accpet_Data.placeholder} action="accpet" />
-                        </div>
-                        <AddBanner path="/1234/travel/asia/food" id="banner2" Width={468} Height={100} />
-                        <CustomAd src={Add} link="/about" alt="custom add" />
-                </>
-        )
+class Accpet extends React.Component {
+      render(){
+                let Accpet_Data = data.Accpet;
+                return (
+                        <React.Fragment>
+                                <AddBanner path="/1234/travel/asia/food" id="banner2" Width={468} Height={100} />
+                                <div className="home-content">
+                                        <FormSec Button={Accpet_Data.button} placeholder={Accpet_Data.placeholder} action="accpet" navigates="answer" />
+                                </div>
+                                <AddBanner path="/1234/travel/asia/food" id="banner2" Width={468} Height={100} />
+                                <CustomAd src={Add} link="/about" alt="custom add" />
+                        </React.Fragment>
+                )
+        }   
 }
 
 export default Accpet;

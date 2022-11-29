@@ -1,11 +1,13 @@
 import React from "react";
 
-const Faq = () => {
-    return (
-        <>
-            Faq
-        </>
-    )
+class Faq extends React.Component {
+    render() {
+        return (
+            <React.Fragment>
+                Faq
+            </React.Fragment>
+        )
+    }
 }
 
 export default Faq;

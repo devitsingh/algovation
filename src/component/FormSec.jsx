@@ -6,8 +6,6 @@ import { useHistory } from "react-router-dom";
 import EnterName from "../assets/img/enter_name.png";
 
 
-
-
 const FormSec = (props) => {
         let history = useHistory();
         const {register, handleSubmit, formState: { errors }} = useForm();

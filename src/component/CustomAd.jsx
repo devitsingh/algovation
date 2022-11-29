@@ -1,15 +1,20 @@
 import React from "react";
 
-const CustomAd = (props) => {
-    return (
-        <>
-            <div className="custom-ad">
-                <a href={props.link} className="custom-ad-link">
-                    <img src={props.src} alt={props.alt} />
-                </a>
-            </div>
-        </>
-    )
+class CustomAd extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        return (
+            <React.Fragment>
+                <div className="custom-ad">
+                    <a href={this.props.link} className="custom-ad-link">
+                        <img src={this.props.src} alt={this.props.alt} />
+                    </a>
+                </div>
+            </React.Fragment>
+        )
+    }
 }
 
 export default CustomAd;
