@@ -8,12 +8,15 @@ import rightAns from "../assets/img/rightAns.png";
 
 export class ViewAnsCard extends React.Component {
         render() {
+                const imageOnErrorHandler = (event) => {
+                        event.currentTarget.src = "https://loremflickr.com/320/240"
+                }
                 return (
                         <React.Fragment>
                                 <div className={(this.props.mediaType === "media") ? `viewAnsGridcard ${(this.props.anstype === `correct` ? 'vAnsCorrect' : `vAnsInCorrect`)}` : `viewAnsSinglecard ${(this.props.anstype === `correct` ? 'vAnsCorrect' : `vAnsInCorrect`)}`}>
-                                        {(this.props.mediaType === "media") ? <div className="viewAnsImgSec"><img src={Img4} alt="view answer grid img" /></div> : ''}
+                                        {(this.props.mediaType === "media") ? <div className="viewAnsImgSec"><img src={this.props.optionVals.image} onError={imageOnErrorHandler} alt="view answer grid img" /></div> : ''}
                                         <div className={`viewansTxt ${(this.props.mediaType === "media") ? `viewansGridTxt` : ``}`}>
-                                                {this.props.optionText}
+                                                {this.props.optionVals.text}
                                                 {
                                                         (this.props.mediaType !== "media") ?
                                                                 (this.props.anstype === `correct`) ?

@@ -32,17 +32,17 @@ const Questions = [
     type: "text",
     options: [
             {
-                id: 'id3',
+                id: 'id4',
                 text: 'q2o 1',
                 order: 2,
             },
             {
-                id: 'id4',
+                id: 'id5',
                 text: 'q2o 2',
                 order: 1,
             },
             {
-                id: 'id21',
+                id: 'id6',
                 text: 'q2o 2',
                 order: 3,
             },
@@ -51,24 +51,6 @@ const Questions = [
 {
     id : 3,
     user_text: "User Side question 3",
-    friend_text: "User Side question",
-    type: "text",
-    options: [
-        {
-            id: 'id5',
-            text: 'q3o 1',
-            order: 1,
-        },
-        {
-            id: 'id6',
-            text: 'q3o 2',
-            order: 2,
-        },
-      ]
-},
-{
-    id : 4,
-    user_text: "User Side question 4",
     friend_text: "User Side question",
     type: "text",
     options: [
@@ -85,8 +67,8 @@ const Questions = [
       ]
 },
 {
-    id : 5,
-    user_text: "User Side question 5",
+    id : 4,
+    user_text: "User Side question 4",
     friend_text: "User Side question",
     type: "text",
     options: [
@@ -103,20 +85,40 @@ const Questions = [
       ]
 },
 {
+    id : 5,
+    user_text: "User Side question 5",
+    friend_text: "User Side question",
+    type: "text",
+    options: [
+        {
+            id: 'id11',
+            text: 'q3o 1',
+            order: 1,
+        },
+        {
+            id: 'id12',
+            text: 'q3o 2',
+            order: 2,
+        },
+      ]
+},
+{
     id : 6,
     user_text: "User Side question 6",
     friend_text: "User Side question",
     type: "media",
     options: [
         {
-            id: 'id11',
+            id: 'id13',
             text: 'q3o 1',
             order: 2,
+            image: "https://imageurl.com/image.png"
         },
         {
-            id: 'id12',
+            id: 'id14',
             text: 'q3o 2',
             order: 1,
+            image: "https://imageurl.com/image.png"
         },
       ]
 },
@@ -127,14 +129,16 @@ const Questions = [
     type: "media",
     options: [
         {
-            id: 'id13',
+            id: 'id15',
             text: 'q3o 1',
             order: 1,
+            image: "https://imageurl.com/image.png"
         },
         {
-            id: 'id14',
+            id: 'id16',
             text: 'q3o 2',
             order: 2,
+            image: "https://imageurl.com/image.png"
         },
       ]
 },
@@ -145,14 +149,16 @@ const Questions = [
     type: "media",
     options: [
         {
-            id: 'id15',
+            id: 'id17',
             text: 'q3o 1',
             order: 2,
+            image: "https://imageurl.com/image.png"
         },
         {
-            id: 'id16',
+            id: 'id18',
             text: 'q3o 2',
             order: 1,
+            image: "https://imageurl.com/image.png"
         },
       ]
 },
@@ -163,14 +169,16 @@ const Questions = [
     type: "media",
     options: [
         {
-            id: 'id17',
+            id: 'id19',
             text: 'q3o 1',
             order: 1,
+            image: "https://imageurl.com/image.png"
         },
         {
-            id: 'id18',
+            id: 'id20',
             text: 'q3o 2',
             order: 2,
+            image: "https://imageurl.com/image.png"
         },
       ]
 },
@@ -181,14 +189,16 @@ const Questions = [
     type: "media",
     options: [
         {
-            id: 'id19',
+            id: 'id21',
             text: 'q3o 1',
             order: 2,
+            image: "https://imageurl.com/image.png"
         },
         {
-            id: 'id20',
+            id: 'id22',
             text: 'q3o 2',
             order: 1,
+            image: "https://imageurl.com/image.png"
         },
       ]
 },
@@ -199,14 +209,16 @@ const Questions = [
     type: "media",
     options: [
         {
-            id: 'id21',
+            id: 'id23',
             text: 'q3o 1',
             order: 2,
+            image: "https://imageurl.com/image.png"
         },
         {
-            id: 'id22',
+            id: 'id24',
             text: 'q3o 2',
             order: 1,
+            image: "https://imageurl.com/image.png"
         },
       ]
 },
